@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:TEST.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="TEST.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="TEST">
+
+	<StackPanel Margin="20">
+		<ComboBox x:Name="PortsComboBox" Margin="0 0 0 10"/>
+		<Button Content="Open Port" Click="OpenPort_Click" Margin="0 0 0 10"/>
+		<ScrollViewer MaxHeight="300">
+			<TextBlock x:Name="OutputText" TextWrapping="Wrap"/>
+		</ScrollViewer>
+	</StackPanel>
+</Window>
